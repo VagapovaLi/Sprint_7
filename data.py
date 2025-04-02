@@ -1,4 +1,7 @@
 import datetime
+import allure
+import requests
+from urls import Urls
 
 class Response:
     #Запрос с несуществующей парой логин-пароль:
@@ -16,10 +19,26 @@ class Response:
     #Успешное создание учетной записи:
     RESPONSE_REGISTRATION_SUCCESSFUL = '{"ok":true}'
 
-class LimitPageOrders:
+class OrderData:
+    #Создание заказа
+    order_data = {
+        "firstName": "Naruto",
+        "lastName": "Uchiha",
+        "address": "Konoha, 142 apt.",
+        "metroStation": 4,
+        "phone": "+7 800 355 35 35",
+        "rentTime": 5,
+        "deliveryDate": "2020-06-06",
+        "comment": "Saske, come back to Konoha",
+        "color": []
+        }
+
+
+#class LimitPageOrders:
 
     #Лимит на страницы заказов:
-    limit_page_orders = {
-        "limit": "5",
-        "page": "0"
-    }
+    #limit_page_orders = {
+        #"limit": "5",
+       # "page": "0"
+    #}
+
